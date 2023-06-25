@@ -1,0 +1,525 @@
+@font-face {
+    font-family: aa;
+    src: url(/62f534ee4efd726b7483e52f_BebasNeuePro-SemiExpBold.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vmax 4vmax;
+}
+#nav-logo img{
+    height: 2.5vmax;
+}
+#nav-left{
+display: flex;
+gap: 7vmax;
+align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 3vmax;
+    list-style: none;
+    font-size: 1.2vmax;
+    letter-spacing: .1vmax;
+}
+nav a{
+    color: rgba(188,243,255,.8);
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    height: 1.6px;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(rgb(102, 179, 197), rgb(130, 93, 167) 47.52%, rgb(187, 101, 113));;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+nav a:hover::after{
+    transform: scaleX(1);
+}
+#nav-right button{
+    font-size: 1.2vmax;
+    font-weight: 800;
+    border: 1.2px solid rgba(188,243,255,.8);
+    padding: 1.2vmax 2.2vmax;
+    color: #bcf3ff;
+    transition: .3s all ease;
+    background-color: black;
+}
+#nav-right button:hover{
+    color: black;
+    background-color: #bcf3ff;
+    transition: .3s all ease;
+}
+
+@media (max-width:570px) {
+    nav{
+        padding: 3vmin 4vmin;
+    }
+    #nav-logo img{
+        height: 2.5vmin;
+    }
+    #nav-left{
+        gap: 7vmin;
+
+    }
+    nav ul{
+        gap: 3vmin;
+        font-size: 1.5vmin;
+        letter-spacing: .1vmin;
+    }
+    #nav-right button{
+        font-size: 1.5vmin;
+        padding: 1.2vmin 2.2vmin;
+    }
+}
+
+#page1{
+    height: 35vmax;
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+@keyframes circular {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+#page1-circle {
+    height: 10vmax;
+    margin-left: 4vmax;
+    animation-name: circular;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#page1-card{
+    height: 55vmax;
+    position: absolute;
+    right:-23vmax;
+    z-index: 0;
+    top: -5vmax;
+}
+#page1 #text1{
+    font-size: 18vmax;
+    font-family: aa;
+    z-index: 1;
+    margin-left: 5vmax;
+    margin-top: 5vmax;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+#page1 #text2{
+    font-size: 12vmax;
+    font-family: aa;
+    z-index: 1;
+    margin-left: -48vmax;
+    margin-top: 22vmax;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+#page1 #text3{
+    font-size: 2.5vmax;
+    line-height: 2.5vmax;
+    font-family: aa;
+    z-index: 1;
+    margin-left:14vmax;
+    margin-top: 28vmax;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+#page1 #arrows{
+    position: absolute;
+    right: 0vmax;
+    height: 12vmax;
+    top: 23vmax;
+    background-color: transparent;
+}
+@media (max-width:570px) {
+    #page1{
+        height: 35vmin;
+    }
+    #page1-circle {
+        height: 10vmin;
+        margin-left: 4vmin;
+    }
+    #page1-card{
+        height: 55vmin;
+        position: absolute;
+        right:-23vmin;
+        z-index: 0;
+        top: -5vmin;
+    }
+    #page1 #text1{
+        font-size: 18vmin;
+        margin-left: 5vmin;
+        margin-top: 5vmin;
+    }
+    #page1 #text2{
+        font-size: 12vmin;
+        margin-left: -48vmin;
+        margin-top: 22vmin;
+    }
+    #page1 #text3{
+        font-size: 2.5vmin;
+        line-height: 2.5vmin;
+        margin-left:14vmin;
+        margin-top: 28vmin;
+    }
+    #page1 #arrows{
+        right: 0vmax;
+        height: 12vmin;
+        top: 23vmin;
+    }
+}
+#page2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vmax 0;
+}
+#page2 #card{
+    width: 100%;
+    height: 23vmax;
+    background: linear-gradient( to right , rgba(102, 180, 197, 0.824), rgba(211, 190, 232, 0.432) 47.52%, rgba(187, 101, 112, 0.683));;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vmax;
+}
+#page2-left p{
+    font-size: 1.2vmax;
+    font-weight: 500;
+    color: #d2dee0;
+}
+#page2-left h1{
+    font-size: 2.5vmax;
+    font-weight: 700;
+    margin-top: 2vmax;
+}
+#page2-right {
+    display: flex;
+    gap: 7vmax;
+}
+#page2-right .elem{
+    text-align: center;
+}
+#page2-right .elem h1{
+    font-size: 8vmax;
+    border-bottom: 1px solid white;
+    font-weight: 400;
+}
+#page2-right .elem h3{
+    font-weight: 600;
+    font-size: 1.2vmax;
+    margin-top: 1vmax;
+}
+@media (max-width:570px) {
+    #page2{
+        padding: 10vmin 0;
+    }
+    #page2 #card{
+        height: 23vmin;
+        padding: 0 4vmin;
+    }
+    #page2-left p{
+        font-size: 1.2vmin;
+    }
+    #page2-left h1{
+        font-size: 2.5vmin;
+        margin-top: 2vmin;
+    }
+    #page2-right {
+        gap: 7vmin;
+    }
+    #page2-right .elem h1{
+        font-size: 8vmin;
+    }
+    #page2-right .elem h3{
+        font-size: 1.2vmin;
+        margin-top: 1vmin;
+    }
+}
+#page3{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 4vmax;
+    margin-bottom: 2vmax;
+}
+#page3-left-box{
+    height: 12vmax;
+    overflow: hidden;
+}
+#page3-left-box img{
+    height: 100%;
+    width: 100%;
+    transition: all ease .5s;
+}
+#page3-left-box img:hover{
+    transform: scale(1.5);
+    transition: all ease .5s;
+}
+#page3-left p{
+    font-size: 1.1vmax;
+    color: rgb(159, 157, 157);
+    margin-top: 1vmax;
+    line-height: 1.5vmax;
+    font-weight: 500;
+    margin-left: 1vmax;
+}
+
+#page3-right-box{
+    height: 30vmax;
+    overflow: hidden;
+}
+#page3-right-box img{
+    height: 100%;
+    width: 100%;
+    transition: all ease .5s;
+}
+#page3-right-box img:hover{
+    transform: scale(1.2);
+    transition: all ease .5s;
+}
+#page3-right-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmax;
+}
+#page3-right-text p{
+    font-size: 1.2vmax;
+}
+#page3-right-text h1{
+    font-size: 2vmax;
+}
+@media (max-width:570px) {
+    #page3{
+        padding: 0 4vmin;
+        margin-bottom: 2vmin;
+    }
+    #page3-left-box{
+        height: 12vmin;
+        overflow: hidden;
+    }
+
+    #page3-left p{
+        font-size: 1.5vmin;
+        margin-top: 2vmin;
+        line-height: 2vmin;
+        margin-left: 1vmin;
+    }
+    
+    #page3-right-box{
+        height: 30vmin;
+        overflow: hidden;
+    }
+    #page3-right-text{
+    justify-content: space-between;
+    }
+    #page3-right-text p{
+        font-size: 2vmin;
+    }
+    #page3-right-text h1{
+        font-size: 2vmin;
+    }
+}
+#page4{
+    width: 100%;
+    background: url("https://assets.website-files.com/62f52e1f730760cd231bb250/62f53fdeb9180f1a014f595b_bg.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#page4 img{
+    width: 100%;
+    height: 45vmax;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#page4 img:hover{
+    transform: scale(1.5);
+    transition: all ease .5s;
+}
+#page4-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vmax;
+    margin-bottom: 15vmax;
+    margin-top: 5vmax;
+}
+#page4-text h1{
+   font-size: 2.5vmax;
+   font-weight: 600;
+}
+#page4-text p{
+    font-weight: 600;
+    color: rgb(171, 168, 168);
+    font-size: 1.2vmax;
+}
+@media (max-width:570px) {
+
+  
+    #page4-text{
+        padding: 0 4vmin;
+        margin-bottom: 15vmin;
+        margin-top: 5vmin;
+    }
+    #page4-text h1{
+       font-size: 2.5vmin;
+    }
+    #page4-text p{
+        font-size: 1.2vmin;
+    }
+    #page4 img{
+        height: 80vmin;
+    }
+}
+footer{
+    border-top: 1px solid rgb(113, 109, 109);
+    padding:6vmax 4vmax;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer h1{
+    margin-bottom: 3vmax;
+    font-size: 3vmax;
+}
+footer #first p{
+    font-size: 1.2vmax;
+}
+footer h2{
+    margin-bottom: 3vmax;
+    font-size: 2vmax;
+}
+footer .elem{
+    display: flex;
+    gap: 3vmax;
+    margin-bottom: 1vmax;
+}
+footer .elem p{
+    font-size: 1.2vmax;
+    color: rgb(222, 217, 217);
+}
+#sub-footer{
+    display: flex;
+    align-items: center;
+    padding: 0 4vmax;
+    gap: 10vmax;
+}
+#sub-footer img{
+    height: 3vmax;
+}
+#sub-footer p{
+    font-size: 1.1vmax;
+    color: rgb(197, 196, 196);
+}
+#sub-footer #text{
+    display: flex;
+    gap: 1vmax;
+}
+#sub-footer #icons{
+    display: flex;
+    gap: 2vmax;
+}
+#sub-footer #icons i{
+    border: .5px solid  rgb(197, 196, 196);
+    padding: .5vmax;
+}
+#end{
+    width: 100%;
+    background-image: linear-gradient(90deg,#4c7983,#785257);
+    margin-top: 5vmax;
+    text-align: center;
+    padding: 1vmax;
+}
+#end p{
+    font-size: 1.1vmax;
+}
+
+/* Full responsive footer */
+@media (max-width:570px) {
+    footer{
+        padding:6vmin 4vmin;
+    }
+    footer h1{
+        margin-bottom: 3vmin;
+        font-size: 3vmin;
+    }
+    footer h2{
+        margin-bottom: 3vmin;
+        font-size: 2vmin;
+    }
+    footer .elem{
+        gap: 3vmin;
+        margin-bottom: 1vmin;
+    }
+    footer .elem p{
+        font-size: 1.2vmin;
+    }
+    #sub-footer{
+        padding: 0 4vmin;
+        gap: 10vmin;
+    }
+    #sub-footer img{
+        height: 3vmin;
+    }
+    #sub-footer p{
+        font-size: 1.1vmin;
+    }
+    #sub-footer #text{
+        gap: 1vmin;
+    }
+    #sub-footer #icons{
+        gap: 2vmin;
+    }
+    #sub-footer #icons i{
+        padding: .5vmin;
+    }
+    #end{
+        margin-top: 5vmin;
+        padding: 1vmin;
+    }
+    #end p{
+        font-size: 1.1vmin;
+    }
+}
